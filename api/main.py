@@ -5,12 +5,8 @@ from io import BytesIO
 from PIL import Image
 import tensorflow as tf
 from fastapi.middleware.cors import CORSMiddleware
-import logging
 
 app=FastAPI()
-
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
 
 origins =[
     "http://localhost",
@@ -28,39 +24,30 @@ app.add_middleware(
 
 
 MODEL=tf.keras.models.load_model("../model_data_augmeneted_version1")
-CLASS_NAMES=["Black Spot", "Downy mildew", "Fresh Leaf"]
+CLASS_NAMES=["Potato___Early_blight","Potato___Late_blight","Potato___healthy"]
 
 
-def read_files_as_image(data, target_size=(512, 512)) -> np.ndarray:
-    try:
-        with Image.open(BytesIO(data)) as img:
-            img = img.convert('RGB')  # Convert image to RGB mode
-            original_size = img.size
-            img = img.resize(target_size)
-            logging.info(f'Image resized from {original_size} to {target_size}')
-        return np.array(img, dtype=np.float32)
-    except Exception as e:
-        logging.error(f'Error processing image: {e}')
-        raise
+def read_files_as_image(data,target_size=(512,512)) -> np.ndarray:
+    image= Image.open(BytesIO(data))
+    image=image.resize(target_size)
+    return(np.array(image))
     
     
     
     
 @app.post("/predict")
-async def predict(file: UploadFile = File(...)):
-    try:
-        image_data = await file.read()
-        logging.info(f'Received image: {file.filename}')
-        image = read_files_as_image(image_data)
-        image_batch = np.expand_dims(image, 0)
-
-        prediction = MODEL.predict(image_batch)
-        predicted_class = CLASS_NAMES[np.argmax(prediction)]
-        confidence = np.max(prediction)
-        logging.info(f'Prediction: {predicted_class} with confidence {confidence}')
-
-        return {"class": predicted_class, "confidence": float(confidence)}
-    except Exception as e:
-        logging.error(f'Prediction error: {e}')
-        return {"error": str(e)}
+async def predict(
+    file: UploadFile= File(...)
+):
+    image= read_files_as_image(await file.read())
+    image_batch= np.expand_dims(image,0)
+    
+    prediction= MODEL.predict(image_batch)
+    predicted_class = CLASS_NAMES[np.argmax(prediction)]
+    confidence = np.max(prediction)
+    
+    return {
+        "class": predicted_class,
+        "confidence": float(confidence)
+    }
     
