@@ -27,7 +27,7 @@ app.add_middleware(
 
 
 
-MODEL=tf.keras.models.load_model("../model_data_augmeneted_version1")
+MODEL=tf.keras.models.load_model("../Saved_model_version1")
 CLASS_NAMES=["Black Spot", "Downy mildew", "Fresh Leaf"]
 
 
