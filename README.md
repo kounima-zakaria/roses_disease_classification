@@ -39,12 +39,12 @@ These images are used to evaluate the model's performance and verify classificat
 The saved model can be loaded and used for inference without retraining.
 
 ## Usage
-#### Dataset Preparation: Ensure that the dataset is properly organized in folders corresponding to each class.
-#### Data Augmentation (Optional): Augment the dataset to increase its diversity and improve model performance if necessary.
-#### Model Training: Execute the training notebook (training.ipynb) to train the CNN model on the dataset.
-#### Model Evaluation: Evaluate the trained model's performance using test images and metrics provided in the training notebook.
-#### Backend Integration: Integrate the trained model into the backend API (api) to expose classification endpoints.
-#### Deployment: Deploy the backend API and frontend interface to a server or hosting platform for public access.
+#### - **Dataset Preparation:** Ensure that the dataset is properly organized in folders corresponding to each class.
+#### - **Data Augmentation (Optional):** Augment the dataset to increase its diversity and improve model performance if necessary.
+#### - **Model Training:** Execute the training notebook (training.ipynb) to train the CNN model on the dataset.
+#### - **Model Evaluation:** Evaluate the trained model's performance using test images and metrics provided in the training notebook.
+#### - **Backend Integration:** Integrate the trained model into the backend API (api) to expose classification endpoints.
+#### - **Deployment:** Deploy the backend API and frontend interface to a server or hosting platform for public access.
 
 ## Note !!  
 
