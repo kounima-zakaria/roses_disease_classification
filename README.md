@@ -59,10 +59,8 @@ The adapted frontend includes the following features and components:
 - Display of classification results to users
 - Responsive design for compatibility across different devices
 
-## Licence
-This project is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). See the [LICENSE](LICENSE) file for details.
 
+## Acknowledgement
+I extend my gratitude to the creators of the dataset used in this project. Their efforts in collecting and curating the dataset have been essential for training and evaluating my machine learning model. Dataset link : [RoseNet: Rose leave dataset for the development of an automation system to recognize the diseases of rose](https://doi.org/10.1016/j.dib.2022.108497)
 
-### Acknowledgement
-I extend my gratitude to the creators of the dataset used in this project. Their efforts in collecting and curating the dataset have been essential for training and evaluating my machine learning model.
 Additionally, I would like to acknowledge the original creators or contributors of the frontend source code for providing a valuable resource that has been instrumental in the development of the Roses Disease Classification project.
