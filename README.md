@@ -50,8 +50,6 @@ The saved model can be loaded and used for inference without retraining.
 
 *The frontend source code used in this project is based on an existing template or framework that has been adapted for the Roses Disease Classification project. While the specific details of the original source may not be provided here, it's essential to acknowledge the original creators or contributors of the frontend code.*
 
-### Source Attribution
-The frontend source code used in this project is adapted from [insert name of template or framework]. The original source provides a foundation for building user interfaces and web applications, and its adaptation for the Roses Disease Classification project adds specific functionality related to image classification and interaction with the backend API.
 
 ### Features and Components
 The adapted frontend includes the following features and components:
@@ -61,5 +59,10 @@ The adapted frontend includes the following features and components:
 - Display of classification results to users
 - Responsive design for compatibility across different devices
 
+## Licence
+This project is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). See the [LICENSE](LICENSE) file for details.
+
+
 ### Acknowledgement
-We extend our gratitude to the original creators or contributors of the frontend source code for providing a valuable resource that has been instrumental in the development of the Roses Disease Classification project. Their work serves as a foundation for building intuitive and user-friendly interfaces, enhancing the accessibility and usability of the project for its intended audience.
+I extend my gratitude to the creators of the dataset used in this project. Their efforts in collecting and curating the dataset have been essential for training and evaluating my machine learning model.
+Additionally, I would like to acknowledge the original creators or contributors of the frontend source code for providing a valuable resource that has been instrumental in the development of the Roses Disease Classification project.
