@@ -1,7 +1,7 @@
 # Roses Disease Classification Project
 
 ## Overview
-    The Roses Disease Classification project aims to develop a machine learning model to classify images of rose leaves into three categories: Black Spot, Downy Mildew, and Fresh Leaf. The project utilizes convolutional neural networks (CNNs) implemented using TensorFlow and Keras to achieve accurate classification. This README provides an overview of the project structure, components, and usage.
+ The Roses Disease Classification project aims to develop a machine learning model to classify images of rose leaves into three categories: Black Spot, Downy Mildew, and Fresh Leaf. The project utilizes convolutional neural networks (CNNs) implemented using TensorFlow and Keras to achieve accurate classification. This README provides an overview of the project structure, components, and usage.
 ![upload_pic](https://github.com/kounima-zakaria/roses_disease_classification/assets/110348449/35018ab5-a543-4af3-b706-cbc691872932)
 ![result](https://github.com/kounima-zakaria/roses_disease_classification/assets/110348449/00947a7d-ade0-4f68-9a56-23a5e1f35220)
 
